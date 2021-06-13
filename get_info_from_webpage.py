@@ -1,4 +1,4 @@
-from os import link
+import os
 from sys import prefix
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -11,7 +11,11 @@ import time
 import pandas  as pd
 
 #Create instance of Chrome Driver
-chrome_drive_path = '/home/brainlesspomo/chromedriver'
+if os.name() == 'nt':
+    chrome_drive_path = ''
+    else if os.name() == 'posix':
+    chrome_drive_path = '/home/brainlesspomo/chromedriver'
+
 url = 'https://ec.europa.eu/eurostat/web/tourism/data/database'
 
 #setting window size, position & opening the website
