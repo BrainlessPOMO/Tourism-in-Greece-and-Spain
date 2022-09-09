@@ -65,66 +65,66 @@ There are 4 tables in database.
 - [arrivals_tour](#arrivals_tour)
 - [arrivals_non_residents](#arrivals_non_residents)
 
-> ### **nights_tour**
->
-> | column   | datatype | Primary key |
-> | -------- | -------- | ----------- |
-> | country  | text     | &#9745;     |
-> | Y2020M07 | text     | &#9744;     |
-> | Y2020M08 | text     | &#9744;     |
-> | Y2020M09 | text     | &#9744;     |
-> | Y2020M10 | text     | &#9744;     |
-> | Y2020M11 | text     | &#9744;     |
-> | Y2020M12 | text     | &#9744;     |
-> | Y2020M01 | text     | &#9744;     |
-> | Y2020M02 | text     | &#9744;     |
-> | Y2020M03 | text     | &#9744;     |
-> | Y2020M04 | text     | &#9744;     |
+### **nights_tour**
 
-> ### **nights_non_residents**
->
-> | column   | datatype | Primary key |
-> | -------- | -------- | ----------- |
-> | country  | text     | &#9745;     |
-> | Y2020M03 | text     | &#9744;     |
-> | Y2020M04 | text     | &#9744;     |
-> | Y2020M05 | text     | &#9744;     |
-> | Y2020M06 | text     | &#9744;     |
-> | Y2020M07 | text     | &#9744;     |
-> | Y2020M08 | text     | &#9744;     |
-> | Y2020M09 | text     | &#9744;     |
-> | Y2020M10 | text     | &#9744;     |
-> | Y2020M11 | text     | &#9744;     |
-> | Y2020M12 | text     | &#9744;     |
+> |  column  | datatype | Primary key |
+> | :------: | :------: | :---------: |
+> | country  |   text   |   &#9745;   |
+> | Y2020M07 |   text   |   &#9744;   |
+> | Y2020M08 |   text   |   &#9744;   |
+> | Y2020M09 |   text   |   &#9744;   |
+> | Y2020M10 |   text   |   &#9744;   |
+> | Y2020M11 |   text   |   &#9744;   |
+> | Y2020M12 |   text   |   &#9744;   |
+> | Y2020M01 |   text   |   &#9744;   |
+> | Y2020M02 |   text   |   &#9744;   |
+> | Y2020M03 |   text   |   &#9744;   |
+> | Y2020M04 |   text   |   &#9744;   |
 
-> ### **arrivals_tour**
->
-> | column   | datatype | Primary key |
-> | -------- | -------- | ----------- |
-> | country  | text     | &#9745;     |
-> | Y2020M03 | text     | &#9744;     |
-> | Y2020M04 | text     | &#9744;     |
-> | Y2020M05 | text     | &#9744;     |
-> | Y2020M06 | text     | &#9744;     |
-> | Y2020M07 | text     | &#9744;     |
-> | Y2020M08 | text     | &#9744;     |
-> | Y2020M09 | text     | &#9744;     |
-> | Y2020M10 | text     | &#9744;     |
-> | Y2020M11 | text     | &#9744;     |
-> | Y2020M12 | text     | &#9744;     |
+### **nights_non_residents**
 
-> ### **arrivals_non_residents**
->
-> | column   | datatype | Primary key |
-> | -------- | -------- | ----------- |
-> | country  | text     | &#9745;     |
-> | Y2020M03 | text     | &#9744;     |
-> | Y2020M04 | text     | &#9744;     |
-> | Y2020M05 | text     | &#9744;     |
-> | Y2020M06 | text     | &#9744;     |
-> | Y2020M07 | text     | &#9744;     |
-> | Y2020M08 | text     | &#9744;     |
-> | Y2020M09 | text     | &#9744;     |
-> | Y2020M10 | text     | &#9744;     |
-> | Y2020M11 | text     | &#9744;     |
-> | Y2020M12 | text     | &#9744;     |
+> |  column  | datatype | Primary key |
+> | :------: | :------: | :---------: |
+> | country  |   text   |   &#9745;   |
+> | Y2020M03 |   text   |   &#9744;   |
+> | Y2020M04 |   text   |   &#9744;   |
+> | Y2020M05 |   text   |   &#9744;   |
+> | Y2020M06 |   text   |   &#9744;   |
+> | Y2020M07 |   text   |   &#9744;   |
+> | Y2020M08 |   text   |   &#9744;   |
+> | Y2020M09 |   text   |   &#9744;   |
+> | Y2020M10 |   text   |   &#9744;   |
+> | Y2020M11 |   text   |   &#9744;   |
+> | Y2020M12 |   text   |   &#9744;   |
+
+### **arrivals_tour**
+
+> |  column  | datatype | Primary key |
+> | :------: | :------: | :---------: |
+> | country  |   text   |   &#9745;   |
+> | Y2020M03 |   text   |   &#9744;   |
+> | Y2020M04 |   text   |   &#9744;   |
+> | Y2020M05 |   text   |   &#9744;   |
+> | Y2020M06 |   text   |   &#9744;   |
+> | Y2020M07 |   text   |   &#9744;   |
+> | Y2020M08 |   text   |   &#9744;   |
+> | Y2020M09 |   text   |   &#9744;   |
+> | Y2020M10 |   text   |   &#9744;   |
+> | Y2020M11 |   text   |   &#9744;   |
+> | Y2020M12 |   text   |   &#9744;   |
+
+### **arrivals_non_residents**
+
+> |  column  | datatype | Primary key |
+> | :------: | :------: | :---------: |
+> | country  |   text   |   &#9745;   |
+> | Y2020M03 |   text   |   &#9744;   |
+> | Y2020M04 |   text   |   &#9744;   |
+> | Y2020M05 |   text   |   &#9744;   |
+> | Y2020M06 |   text   |   &#9744;   |
+> | Y2020M07 |   text   |   &#9744;   |
+> | Y2020M08 |   text   |   &#9744;   |
+> | Y2020M09 |   text   |   &#9744;   |
+> | Y2020M10 |   text   |   &#9744;   |
+> | Y2020M11 |   text   |   &#9744;   |
+> | Y2020M12 |   text   |   &#9744;   |
