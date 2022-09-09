@@ -1,6 +1,8 @@
 # Monthly Tourist Data for Greece and Spain
 
-This is a **Web Scrapping** program. It is getting info from the **europa-eurostat** database and stores it in a local sqlite database.
+This is a **Web Scrapping** program, using **selenium**.
+
+It is getting info from [**europa-eurostat**](https://ec.europa.eu/eurostat/web/tourism/data/database "eurostat database") database and stores it in a local sqlite database.
 
 ## Contents
 
