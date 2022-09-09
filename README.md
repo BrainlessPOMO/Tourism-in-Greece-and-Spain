@@ -127,23 +127,17 @@ There are 4 tables in database.
 ## How is it running
 
 ```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
-
-```mermaid
-graph TD
-A[Start] --> B[Start Chrome webdriver] -- Accept Coockies --> C[Click needed folder] --> D[open data]
-B -- retry to accept the coockies --> B
-```
-
-```mermaid
-graph
-subgraph hypothesis
-sh(Size Of House) --> h(Hypothesis)
-h(Hypothesis) --> ep(Estimated Price)
+graph TB
+  subgraph begin and set up
+  A[Start] --> B[Start chrome webdriver] -- Accept Coockies --> C[Click needed folder] --> D[Open data on different windows]
 end
+
+subgraph retrieve and store data
+  E[Get data from windows] --> F[Prettify data] --> G[Store them in database]
+end
+
+D --> E
+B -- retry to accept coockies --> B
+E -- refresh if window is not loaded -->E
+
 ```
