@@ -14,7 +14,7 @@ This is a **Web Scrapping** program. It is getting info from the **europa-eurost
     - [**nights_non_residents**](#nights_non_residents)
     - [**arrivals_tour**](#arrivals_tour)
     - [**arrivals_non_residents**](#arrivals_non_residents)
-  - [How is it running](#how-is-it-running)
+  - [How does it works?](#how-does-it-works)
 
 ## Libraries Used
 
@@ -39,7 +39,7 @@ There are 5 python files in the project. Each one does something different from 
    - **sqlite3**
 4. **delete_everythin_from_db.py**. This file exist just to delete everything from the database, so that the main program can run again. It requires only the library:
    - **sqlite3**
-5. Finally **get_info_from_webpage.py**. This is the main program. It opens the website and. It requires the libraries:
+5. Finally **get_info_from_webpage.py**. This is the main program. It opens europa website and retrieves the desired data. It requires the libraries:
    - **sqlite3**
    - **selenium**
    - **chromedriver_autoinstaller**
@@ -50,11 +50,8 @@ There are 5 python files in the project. Each one does something different from 
 > I am assuming that you have installed all the required libraries
 
 - Firstly, you have to setup the database, by running the **setup_db.py** file
-- After your database is set up
--
--
-
-_Everything_ is going according to **plan**.
+- After your database is set, you can run the file **get_info_from_webpage.py**. It will open all the pages containing the information we want and store them into the database
+- Finally, run the file **check_info_create_csv.py** that prints the stored information and saves them as CSV files in the folder called "csv files"
 
 ## Database Configuration
 
@@ -124,20 +121,21 @@ There are 4 tables in database.
 > | Y2020M11 |   text   |   &#9744;   |
 > | Y2020M12 |   text   |   &#9744;   |
 
-## How is it running
+## How does it works?
+
+There is a simple graph that describes how the program is working
 
 ```mermaid
 graph TB
   subgraph begin and set up
-  A[Start] --> B[Start chrome webdriver] -- Accept Coockies --> C[Click needed folder] --> D[Open data on different windows]
+  A[Start] --> B[Start chrome webdriver and open link] --> C[Set up the window] -- Accept Coockies --> D[Click needed folder]
 end
 
 subgraph retrieve and store data
-  E[Get data from windows] --> F[Prettify data] --> G[Store them in database]
+  E[Open data on different windows] --> F[Get data from each window] --> G[Prettify them] --> H[Store them in database]
 end
 
 D --> E
-B -- retry to accept coockies --> B
-E -- refresh if window is not loaded -->E
-
+C -- retry to accept coockies --> C
+F -- refresh if window is not loaded --> F
 ```
