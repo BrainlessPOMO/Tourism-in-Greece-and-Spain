@@ -2,7 +2,7 @@
 
 ### This is a **Web Scrapping** program. It is getting info from the **europa-eurostat** database and stores it in a local sqlite database.
 
-Detailed information about how this program runs you can find on the [Running](#Running) segment
+Detailed information about how this program runs you can find on the [Running](#How-is-it-running) segment
 
 ## Libraries Used
 
@@ -53,4 +53,4 @@ There are 4 python files in the
 
 _Everything_ is going according to **plan**.
 
-## Running
+## How is it running
