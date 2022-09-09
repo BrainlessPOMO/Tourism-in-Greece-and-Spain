@@ -1,4 +1,5 @@
 from sqlite3.dbapi2 import connect
+import sqlite3 as sql
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.webdriver import WebDriver
@@ -8,7 +9,6 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import chromedriver_autoinstaller
 import os
-import sqlite3 as sql
 
 # Search for chrome driver or make one if it does not exist
 if str(os.name) == 'nt':
@@ -21,8 +21,8 @@ else:
 url = 'https://ec.europa.eu/eurostat/web/tourism/data/database'
 # setting window size, position & opening the website
 driver = webdriver.Chrome()
-driver.set_window_size(1920, 1080, windowHandle='current')
-driver.set_window_position(1920, 0, windowHandle='current')
+driver.set_window_size(1920, 800, windowHandle='current')
+driver.set_window_position(0, 0, windowHandle='current')
 driver.get(url)
 
 try:

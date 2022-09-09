@@ -1,18 +1,30 @@
 # Monthly Tourist Data for Greece and Spain
 
-### This is a **Web Scrapping** program. It is getting info from the **europa-eurostat** database and stores it in a local sqlite database.
+This is a **Web Scrapping** program. It is getting info from the **europa-eurostat** database and stores it in a local sqlite database.
 
-Detailed information about how this program runs you can find on the [Running](#How-is-it-running) segment and detailed information about the database you will find on the [Database](#Database-Configuration) segment
+## Contents
+
+- [Monthly Tourist Data for Greece and Spain](#monthly-tourist-data-for-greece-and-spain)
+  - [Contents](#contents)
+  - [Libraries Used](#libraries-used)
+  - [Files](#files)
+  - [How to Use](#how-to-use)
+  - [Database Configuration](#database-configuration)
+    - [**nights_tour**](#nights_tour)
+    - [**nights_non_residents**](#nights_non_residents)
+    - [**arrivals_tour**](#arrivals_tour)
+    - [**arrivals_non_residents**](#arrivals_non_residents)
+  - [How is it running](#how-is-it-running)
 
 ## Libraries Used
 
 This program is made for **_windows_** and exclusively in **_python_** so it needs these libraries in order to run:
 
-1. selenium
-2. os
-3. sqlite3
-4. pandas
-5. chromedriver_autoinstaller
+1. **selenium**
+2. **os**
+3. **sqlite3**
+4. **pandas**
+5. **chromedriver_autoinstaller**
 
 ## Files
 
@@ -27,43 +39,26 @@ There are 5 python files in the project. Each one does something different from 
    - **sqlite3**
 4. **delete_everythin_from_db.py**. This file exist just to delete everything from the database, so that the main program can run again. It requires only the library:
    - **sqlite3**
-5. Finally **get_info_from_webpage.py**. This is the main program. It opens the website and
+5. Finally **get_info_from_webpage.py**. This is the main program. It opens the website and. It requires the libraries:
+   - **sqlite3**
+   - **selenium**
+   - **chromedriver_autoinstaller**
+   - **os**
 
 ## How to Use
 
-- Revenue was off the chart.
-- Profits were higher than ever.
-- Profits were higher than ever.
--
+> I am assuming that you have installed all the required libraries
+
+- Firstly, you have to setup the database, by running the **setup_db.py** file
+- After your database is set up
 -
 -
 
 _Everything_ is going according to **plan**.
 
-## How is it running
-
-|                  | ASCII                           | HTML              |
-| ---------------- | ------------------------------- | ----------------- |
-| Single backticks | `'Isn't this fun?'`             | 'Isn't this fun?' |
-| Quotes           | `"Isn't this fun?"`             | "Isn't this fun?" |
-| Dashes           | `-- is en-dash, --- is em-dash` | is em-dash        |
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
-
 ## Database Configuration
 
 There are 4 tables in database.
-
-- [nights_tour](#nights_tour)
-- [nights_non_residents](#nights_non_residents)
-- [arrivals_tour](#arrivals_tour)
-- [arrivals_non_residents](#arrivals_non_residents)
 
 ### **nights_tour**
 
@@ -128,3 +123,27 @@ There are 4 tables in database.
 > | Y2020M10 |   text   |   &#9744;   |
 > | Y2020M11 |   text   |   &#9744;   |
 > | Y2020M12 |   text   |   &#9744;   |
+
+## How is it running
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
+```mermaid
+graph TD
+A[Start] --> B[Start Chrome webdriver] -- Accept Coockies --> C[Click needed folder] --> D[open data]
+B -- retry to accept the coockies --> B
+```
+
+```mermaid
+graph
+subgraph hypothesis
+sh(Size Of House) --> h(Hypothesis)
+h(Hypothesis) --> ep(Estimated Price)
+end
+```
