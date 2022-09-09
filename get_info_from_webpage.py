@@ -13,10 +13,9 @@ import sqlite3 as sql
 # Search for chrome driver or make one if it does not exist
 if str(os.name) == 'nt':
     chromedriver_autoinstaller.install()
-elif str(os.name) == 'posix':
-    chrome_drive_path = '/home/brainlesspomo/chromedriver'
 else:
-    print("Something is wrong! I am sorry for the inconvenience")
+    print("This program is made for windows. I am sorry!!")
+    quit()
 
 
 url = 'https://ec.europa.eu/eurostat/web/tourism/data/database'
