@@ -1,12 +1,19 @@
-# Monthly Tourist Data for Greece and Spain
+# Tourism in Greece and Spain
 
 This is a **Web Scrapping** program, using **selenium**.
 
-It is getting info from [**europa-eurostat**](https://ec.europa.eu/eurostat/web/tourism/data/database "eurostat database") database and stores it in a local sqlite database.
+It is getting info from [**europa-eurostat**](https://ec.europa.eu/eurostat/web/tourism/data/database "eurostat database") database about:
+
+1. Arrivals at tourist accommodation establishments
+2. Arrivals of non-residents at tourist accommodation establishments - 1990-2011 - world geographical breakdown
+3. Nights spent at tourist accommodation establishments
+4. Nights spent by non-residents at tourist accommodation establishments - 1990-2011 - world geographical breakdown
+
+in Greece and Spain and stores them in a sqlite database
 
 ## Contents
 
-- [Monthly Tourist Data for Greece and Spain](#monthly-tourist-data-for-greece-and-spain)
+- [Tourism in Greece and Spain](#tourism-in-greece-and-spain)
   - [Contents](#contents)
   - [Libraries Used](#libraries-used)
   - [Files](#files)
