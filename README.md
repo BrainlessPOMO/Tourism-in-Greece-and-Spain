@@ -14,11 +14,9 @@ This program is made for **_windows_** and exclusively in **_python_** so it nee
 
 ## How to Use
 
-```
 #### The quarterly results look great!
 
 - Revenue was off the chart.
 - Profits were higher than ever.
 
-*Everything* is going according to **plan**.
-```
+_Everything_ is going according to **plan**.
