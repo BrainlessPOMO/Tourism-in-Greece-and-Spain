@@ -7,6 +7,7 @@ import delete_everything_from_db as delData
 import check_db_info as checkInfo
 import create_csv as createCSVs
 import setup_db as sDB
+import delete as delDB
 
 
 class Table:
@@ -64,6 +65,7 @@ def check_db_info():
     else:
         info = tk.Toplevel(root)
         info.title("Saved data")
+        info.iconbitmap('icon.ico')
         title1 = tk.Label(
             info, text="Nights spent at tourist accommodation establishments - monthly data",
             fg='Black', font=('Arial', 11, 'bold')).grid(row=0, column=0, columnspan=3, sticky='ws', pady=(10, 0))
@@ -101,8 +103,12 @@ def setUpDB():
     if MsgBox == 'yes':
         databaseExists = sDB.main()
         if databaseExists == 0:
-            showerror('Database Exists',
-                      'Database already exists! Please press the button "Retrieve data from Web" to insert data')
+            DelMsgBox = askquestion('Database Exists',
+                                    'Database already exists! Would you like to delete it?')
+            if DelMsgBox == 'yes':
+                delDB.main()
+                showinfo(
+                    'Database Deleted!', 'Database has been deleted. Please, set it up again and retry.')
         else:
             showinfo('Database Created',
                      'Database has successfully created! Please press the button "Retrieve data from Web" to insert data')
@@ -110,10 +116,11 @@ def setUpDB():
 
 # start program
 root = tk.Tk()
-root.title("Tourist in Greece and Spain")
+root.title("Tourism in Greece and Spain")
 root.eval('tk::PlaceWindow . center')
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
+root.iconbitmap("icon.ico")
 
 window_height = 270
 window_width = 530
