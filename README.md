@@ -39,16 +39,16 @@ This program is made for **_windows_** and exclusively in **_python_** so it nee
 
 There are 5 python files in the project. Each one does something different from the other one.
 
-1. **setup_db.py**. This file is setting up the database that we are gonna need, in order to save the data in the end. It requires only the library:
+1. **setup_db.py**. This file sets up the database that we are gonna need, in order to save the data in the end. The Button "Create database" runs this file. It requires only the library:
    - **sqlite3**
-2. **check_db_info.py**. This file prints the information that is already stored in our database. It requires only the library:
+2. **check_db_info.py**. This file prints the information that is already stored in our database. The Button "Check Saved Info" runs this file. It requires only the library:
    - **sqlite3**
-3. **check_info_create_csv.py**. This file also prints the information that is already stored in our database using pandas dataframes. Also it exports the stored information to 4 different csv files, one for each table in our database. It requires the libraries:
+3. **create_csv.py**. This file exports the stored information to 4 different csv files, one for each table in our database. The Button "Create CSVs" runs this file. It requires the libraries:
    - **pandas**
    - **sqlite3**
-4. **delete_everythin_from_db.py**. This file exist just to delete everything from the database, so that the main program can run again. It requires only the library:
+4. **delete_everything_from_db.py**. This file exist just to delete everything from the database, so that the main program can run again. The Button "Delete all data from database" runs this file. It requires only the library:
    - **sqlite3**
-5. Finally **get_info_from_webpage.py**. This is the main program. It opens europa website and retrieves the desired data. It requires the libraries:
+5. Finally **get_info_from_webpage.py**. This is the main program. It opens europa website and retrieves the desired data. The Button "Retrieve data from Web" runs this file. It requires the libraries:
    - **sqlite3**
    - **selenium**
    - **chromedriver_autoinstaller**
@@ -58,9 +58,11 @@ There are 5 python files in the project. Each one does something different from 
 
 > I am assuming that you have installed all the required libraries
 
-- Firstly, you have to setup the database, by running the **setup_db.py** file
-- After your database is set, you can run the file **get_info_from_webpage.py**. It will open all the pages containing the information we want and store them into the database
-- Finally, run the file **check_info_create_csv.py** that prints the stored information and saves them as CSV files in the folder called "csv files"
+- First of all you have to run the file **Tourism_in_Greece_Spain** which starts the main GUI
+- After that, you have to setup the database, by clicking the **Create database** button. You have to know that tables of database will not be created if they exist already
+- After your database is set, you can click the **Retrieve data from Web** button. It will open all the pages containing the information we want and store them into the database
+- Finally, click the **Check Saved Info** button that opens a new window showing all stored data (if there are)
+  - If you would like to store the data in csv format, you can click the **Create CSVs** button. You csv files will be in the folder named **csv files**
 
 ## Database Configuration
 
