@@ -1,8 +1,6 @@
 from cgitb import text
 import tkinter as tk
 from tkinter.messagebox import *
-from PyQt5 import QtGui
-import pandas as pd
 
 import get_info_from_webpage as getData
 import delete_everything_from_db as delData
@@ -31,10 +29,18 @@ class Table:
 
 
 def get_info_from_webpage():
-    showwarning("Program Is Running!",
-                "Please don't close, don't be afraid the program, it is trying to get information from server")
-    getData.main()
-    showinfo("Success!", "Data has successfully inserted into database")
+    df1, df2, df3, df4 = checkInfo.main()
+    total_rows = len(df1.axes[0])
+    total_columns = len(df1.axes[1])
+    if total_columns == 0 or total_rows == 0:
+        showwarning("Program Is Still Running!",
+                    "Please don't quit, don't be afraid. The program is trying to get information from server!")
+        getData.main()
+        showinfo("Success!", "Data has successfully inserted into database")
+    else:
+        showerror("Could not Save Data",
+                  """It appears that there are already data in database. 
+Please press the "Delete all data from database" button and try again!""")
 
 
 def delete_data():
@@ -80,18 +86,26 @@ def check_db_info():
 
 
 def create_CSV():
-    createCSVs.main()
-    showinfo("CSV Files Created!",
-             """CSV Files have been successfuly created. They are lockated in the folder named "csv files" """)
+    databaseExists = createCSVs.main()
+    if databaseExists == 0:
+        showerror("CSV Files Cannot be Created",
+                  """CSV Files have not been created. There seems to be a problem with the database. Please press the "Create Database" button to create the database.""")
+    else:
+        showinfo("CSV Files Created!",
+                 """CSV Files have been successfuly created. They are lockated in the folder named "csv files" """)
 
 
 def setUpDB():
     MsgBox = askquestion(
         'Create Database', 'Are you sure you want to create the database? It will not be created if it already exists!')
     if MsgBox == 'yes':
-        sDB.main()
-        showinfo('Database Created',
-                 'Database is successfully created. Please press the button "Retrieve data from Web" to insert data')
+        databaseExists = sDB.main()
+        if databaseExists == 0:
+            showerror('Database Exists',
+                      'Database already exists! Please press the button "Retrieve data from Web" to insert data')
+        else:
+            showinfo('Database Created',
+                     'Database has successfully created! Please press the button "Retrieve data from Web" to insert data')
 
 
 # start program

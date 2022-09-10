@@ -1,8 +1,11 @@
 import pandas as pd
 import sqlite3 as sql
+from os.path import exists as file_exists
 
 
 def main():
+    if file_exists('webpageInfo.db') == False:
+        return 0
     connection = sql.connect('webpageInfo.db')
 
     df1 = pd.read_sql_query('SELECT * FROM nights_tour', connection)
@@ -19,3 +22,4 @@ def main():
     df4.to_csv(r'csv files/Arrivals of non-residents at tourist accommodation establishments - 1990-2011 - world geographical breakdown - monthly data.csv', index=False, header=True)
 
     connection.close()
+    return 1
