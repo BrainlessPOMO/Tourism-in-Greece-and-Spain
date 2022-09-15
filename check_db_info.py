@@ -12,3 +12,6 @@ def main():
 
     connection.close()
     return df1, df2, df3, df4
+
+if __name__ == '__main__':
+    main()
